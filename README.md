@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Movie Listing App Using MERN Stack
+
+This project uses MERN stack to implement a movie listing app.
 
 ## Available Scripts
 
