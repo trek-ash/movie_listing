@@ -4,6 +4,7 @@ const port = 8000;
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const items = require('./routes/api/items')
+const users = require('./routes/api/users')
 require("dotenv").config();
 
 app.use(bodyParser.urlencoded({
@@ -24,6 +25,7 @@ mongoose
 mongoose.set("useFindAndModify", false);
 
 app.use('/', items) 
+app.use('/', users) 
 app.listen(port, ()=>{
     console.log("server running..")
 })
