@@ -11,7 +11,7 @@ const UserInfo = require("../../models/UserInfo");
 // @access Public
 router.post("/register", async (req, res) => {
     try {
-    
+      console.log(req.body.email)
       const {
         email,
         password,
@@ -39,7 +39,7 @@ router.post("/register", async (req, res) => {
         const user = await newUser.save();
   
         const payload = {
-          id: user._id,
+          email: user.email,
         };
         // Sign token
         jwt.sign(
@@ -82,7 +82,7 @@ router.post("/login", async (req, res) => {
         const isMatch = await bcrypt.compare(password, user.password);
         if (isMatch) {
             const payload = {
-                id: user._id,
+                email: user.email,
             };
             // Sign token
             jwt.sign(

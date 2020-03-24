@@ -17,6 +17,12 @@ const UserInfoSchema = new Schema(
       type: String,
       required: false
     },
+    favourites: [
+      {
+        type: Object,
+        required: false
+      }
+    ]
     
   },
   { timestamps: true }
