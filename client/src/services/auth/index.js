@@ -22,7 +22,6 @@ class Auth {
                 else return response.json()
             })
             .then(response => {
-                console.log(response)
                 if(response){
                     this.email = email
                     this.setSession(response)
