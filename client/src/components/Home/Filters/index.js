@@ -1,4 +1,5 @@
 import React from 'react';
+import './Filters.css'
 
 const Filters = (props)=>{
     return(
@@ -7,7 +8,7 @@ const Filters = (props)=>{
             type="text" 
             id="searchText"
             placeholder="Search ..."
-            className="form-control"
+            className="search-box my-3"
             onChange={props.Change}    
             />
         </div>

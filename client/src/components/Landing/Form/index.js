@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import './Form.css';
 const Form = (props) =>{
     const [email, updateEmail] = useState('')
     const [password, updatePassword] = useState('')
     return(
         <form onSubmit={e => {e.preventDefault(); props.action(email, password)}}>
+            <br /> 
             <input 
             type="email" 
             name="email" 
@@ -12,6 +14,7 @@ const Form = (props) =>{
             onChange={e=>updateEmail(e.target.value)}
             placeholder="Enter email"
             id="email"/>
+            <br /> 
             <input 
             type="password" 
             name="password" 
@@ -20,8 +23,9 @@ const Form = (props) =>{
             onChange={e=>updatePassword(e.target.value)}
             placeholder="Enter password"
             id="password"/>
-
-            <button className="btn btn-primary float-right mt-4" type="submit">{props.role}</button>  
+            <div className="clear-both"></div>
+            <button className="btn btn-outline-primary float-right mt-5" type="submit">{props.role}</button> 
+            <br /> 
         </form>
     )
 }

@@ -6,8 +6,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
-
+#root{
+  background-image: url('./assets/images/background.jpg');
+  min-height: 100vh;
+  font-family: 'Baloo Thambi 2', cursive;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

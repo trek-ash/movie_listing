@@ -5,12 +5,10 @@ import Login from './Login'
 export default function Landing(props){
     const isAuthenticated = props.auth.isAuthenticated();
     return(
-        isAuthenticated==null?
-        <>  
-            <div className='container mx-auto'>
-                <Login auth={props.auth}/>
-            </div>
+        isAuthenticated==null?  
+        <>
+            <Redirect to="/login" />  
         </>:
-        <Redirect to="/home" />
+            <Redirect to="/home" />
     )
 }
