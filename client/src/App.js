@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import Home from './components/Home/Home';
 import Landing from './components/Landing/Landing';
@@ -12,6 +12,9 @@ import Favourite from './services/favourites'
 const auth = new Auth();
 const favourite = new Favourite()
 function App(props) {
+  useEffect(() => {
+    document.title = "Movie Finder"
+ }, []);
   return (
     <Router>
      
