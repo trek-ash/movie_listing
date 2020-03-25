@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Filters from './Filters';
+import './Home.css';
 import Results from './Results';
 import { Redirect, Link } from "react-router-dom";
 import { api_key, movie_api_base_url } from '../../constants';
@@ -59,14 +60,14 @@ const Home = (props) => {
                 props.auth.isAuthenticated()?
                 <>
                     
-                    <div className="container mt-5">
+                    <div className="container home-card mt-5 p-5">
                         <div className="my-3 border-bottom">
-                            <Link to="/favourites">Favourites</Link>
+                            <h6><Link to="/favourites">Your Favourites</Link></h6>
                         </div>
-                        <h2>Welcome!</h2>
+                            <h3>Search images based on the names</h3>  
                         
-                        <div> 
                             <Filters Change={handleSearchChange} />
+                        <div className="result-area"> 
                             <Results result={searchRes} addToFavourite={addToFavourite} removeFromFavourite={removeFromFavourite}/>
                         </div>
                     </div>

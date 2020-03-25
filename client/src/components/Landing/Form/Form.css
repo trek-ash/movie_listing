@@ -1,0 +1,6 @@
+.form-control{
+    background-color: transparent!important;
+    border: none!important;
+    border-bottom: 1px solid #000!important;
+    border-radius: 0!important;
+}

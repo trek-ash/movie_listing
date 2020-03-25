@@ -25,12 +25,12 @@ const Favourites = (props) => {
             props.auth.isAuthenticated?
             
             <>
-            <div className="container mx-auto mt-5">
+            <div className="container home-card p-5 mx-auto mt-5">
                 <div className="my-3 border-bottom">
                     <Link to="/home">Home</Link>
                 </div>
                 <h3>My Favourites</h3>
-                <div>
+                <div className="result-area">
                 {
                     favourites
                     ?.map((movie)=> {

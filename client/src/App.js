@@ -17,7 +17,6 @@ function App(props) {
  }, []);
   return (
     <Router>
-     
         <main>
           <Header auth={auth}/>
           <Switch>

@@ -1,0 +1,16 @@
+.home-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    
+}
+.home-card a{
+   
+    font-weight: bold!important;
+
+}
+.home-card a:hover{
+    text-decoration: none;
+}
+.result-area {
+    max-height: 50vh;
+    overflow-y: auto;
+}

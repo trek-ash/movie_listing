@@ -9,7 +9,7 @@ const Header = (props)=>{
       history.push('/')
     }
     return (
-        <nav className="py-5 px-4 border-bottom">
+        <nav className="py-5 px-4">
           {
             isAuthenticated?
             <>

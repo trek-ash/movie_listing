@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from '../Form';
+import '../Landing.css';
 import {  Link,useHistory } from 'react-router-dom'
 
 export default function Login(props){
@@ -16,13 +17,15 @@ export default function Login(props){
         })
     }
     return(
-        <div className='container mx-auto mt-5'>
+        <div className='container custom-card p-5 mx-auto mt-5'>
+            <br /> <br /> 
             <h3>Please login to continue</h3>  <br/>
             <Form 
-                    role='login'
+                    role='Login'
                     action={onLogin}
             />   
-            <div className='mt-4'> New User? <Link to={`/Register`}>Register</Link></div>
+            <div className='mt-5'> New User? <Link to={`/Register`}>Register</Link></div>
+            <br />
        </div>
     )
 }
