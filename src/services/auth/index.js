@@ -62,7 +62,7 @@ class Auth {
                     res(false)
             })
             .catch(err=>{
-                console.log(err)
+                
                 rej(err)
             })
         })
@@ -87,13 +87,12 @@ class Auth {
     isAuthenticated = () => {
         let isAuthenticated = localStorage.getItem('access_token');
         // return new Date().getTime() < expiresAt.exp;;
-        console.log(isAuthenticated)
+        
         return isAuthenticated
     }
 
     getEmail = () => {
         const token = localStorage.getItem('access_token')
-        console.log(token)
         return jwt.decode(token).email;
     }    
 

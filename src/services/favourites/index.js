@@ -1,4 +1,5 @@
 import { api_base_url } from '../../constants'; 
+
 class Favourite{
     
     add = (email, title, overview, movie_id) => {
@@ -52,18 +53,38 @@ class Favourite{
                 else return response.json()
             })
             .then(response => {
-                
-                if(response){
-                
-                    res(true)
-                }
-                else
-                    res(false)
+                res(response)
             })
             .catch(err=>rej(err))
         })
     }
 
+    getFavourites = (email) => {
+        const requestOptions = {
+            method: 'GET',
+            headers: {'content-type':'application/json', email: email},
+            
+        };
+        return new Promise((res, rej)=>{
+            fetch(
+                `${api_base_url}/movie/favourites`,
+                requestOptions
+            )
+            .then(response => {
+                
+                if(response.status===400)
+                    return res(false)
+                
+                else return response.json()
+            })
+            .then(response => {
+                res(response.Body)
+                
+            })
+            .catch(err=>rej(err))
+        })
+    }
+    
     
 }
 

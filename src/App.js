@@ -8,7 +8,9 @@ import Auth from './services/auth';
 import Login from './components/Landing/Login';
 import Register from './components/Landing/Register';
 import Favourites from './components/Favourites';
+import Favourite from './services/favourites'
 const auth = new Auth();
+const favourite = new Favourite()
 function App(props) {
   return (
     <Router>
@@ -20,7 +22,7 @@ function App(props) {
             <Route path="/home"  render={props=><Home auth={auth} {...props}/>} />
             <Route path="/login"  exact render={props=><Login auth={auth} {...props}/>}/>
             <Route path="/register"  render={props=><Register auth={auth} {...props}/>}/>
-            <Route path="/favourites" render={props=><Favourites auth={auth} {...props}/>}/>
+            <Route path="/favourites" render={props=><Favourites auth={auth} favourite={favourite} {...props}/>}/>
             {/* <Route path="/contact"  component={Contact} /> */}
           </Switch>
         </main>

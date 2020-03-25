@@ -9,7 +9,7 @@ const Results = (props) =>{
                 'No Results'
                 :
                 props.result?.results?.map((movie)=> {
-                    return <MovieCard addToFavourite={props.addToFavourite} key={movie.id} movie={movie}/>
+                    return <MovieCard addToFavourite={props.addToFavourite} removeFromFavourite={props.removeFromFavourite} key={movie.id} movie={movie}/>
                 })
             }
         </div>
