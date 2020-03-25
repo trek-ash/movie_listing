@@ -3,7 +3,7 @@ li{
 }
 
 .custom-card{
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9)!important;
     color: #000;
     background: transparent;
     max-width: 55%!important;
