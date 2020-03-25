@@ -32,10 +32,10 @@ const Home = (props) => {
         )
         .then((res)=> res.json())
         .then((res)=>{
-            console.log(res)
+            
             updateSearchRes(res)
         })
-        console.log(searchVal)
+        
     }
 
     const addToFavourite = (title, overview, movie_id) => {
@@ -53,7 +53,7 @@ const Home = (props) => {
     }
 
     useEffect(()=>{
-        console.log(searchRes)
+        
     }, [searchRes])
     return (
                 props.auth.isAuthenticated()?

@@ -11,7 +11,7 @@ const UserInfo = require("../../models/UserInfo");
 // @access Public
 router.post("/register", async (req, res) => {
     try {
-      console.log(req.body.email)
+      
       const {
         email,
         password,

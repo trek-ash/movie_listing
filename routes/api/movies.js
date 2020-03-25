@@ -81,7 +81,7 @@ router.post("/movie/favourites/remove", async (req, res) => {
             index=i
           }
         });
-        if(index)
+        if(index || index==0)
           user.favourites.splice(index, 1)
         const saved = await user.save()
         return res.status(200).json({
