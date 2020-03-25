@@ -1,0 +1,11 @@
+.fav-image, .add-image, .del-image{
+    height: 24px;
+    width: 24px;
+    
+}
+.fav-image{
+    cursor: default!important;    
+}
+img{
+    cursor: pointer;
+}
