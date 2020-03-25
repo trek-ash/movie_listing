@@ -9,3 +9,9 @@ li{
     max-width: 55%!important;
     box-shadow: 1px 5px 15px #000;
 }
+
+@media (max-width: 768px){
+    .custom-card{
+        max-width: 90%!important;
+    }
+}
